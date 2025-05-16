@@ -1,0 +1,68 @@
+2025-05-16 18:00:24.067 +01:00 [INF] Starting up the application
+2025-05-16 18:00:25.612 +01:00 [INF] User profile is available. Using 'C:\Users\miaku\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-16 18:00:25.925 +01:00 [INF] Inside Configure method
+2025-05-16 18:00:26.023 +01:00 [INF] Now listening on: http://localhost:5000
+2025-05-16 18:00:26.023 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-16 18:00:26.024 +01:00 [INF] Hosting environment: Development
+2025-05-16 18:00:26.024 +01:00 [INF] Content root path: C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator
+2025-05-16 18:01:56.615 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/ application/x-www-form-urlencoded 215
+2025-05-16 18:01:56.678 +01:00 [INF] Executing endpoint '/Index'
+2025-05-16 18:01:56.942 +01:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-05-16 18:01:57.028 +01:00 [INF] Executing handler method BPCalculator.Pages.BloodPressureModel.OnPost - ModelState is "Valid"
+2025-05-16 18:01:57.035 +01:00 [INF] Executed handler method OnPost, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-05-16 18:01:57.235 +01:00 [INF] Executed page /Index in 285.5909ms
+2025-05-16 18:01:57.237 +01:00 [INF] Executed endpoint '/Index'
+2025-05-16 18:01:57.246 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/ application/x-www-form-urlencoded 215 - 200 - text/html;+charset=utf-8 638.5989ms
+2025-05-16 18:02:16.368 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/ application/x-www-form-urlencoded 215
+2025-05-16 18:02:16.369 +01:00 [INF] Executing endpoint '/Index'
+2025-05-16 18:02:16.369 +01:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-05-16 18:02:16.370 +01:00 [INF] Executing handler method BPCalculator.Pages.BloodPressureModel.OnPost - ModelState is "Valid"
+2025-05-16 18:02:16.370 +01:00 [INF] Executed handler method OnPost, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-05-16 18:02:16.376 +01:00 [INF] Executed page /Index in 6.7588ms
+2025-05-16 18:02:16.376 +01:00 [INF] Executed endpoint '/Index'
+2025-05-16 18:02:16.376 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/ application/x-www-form-urlencoded 215 - 200 - text/html;+charset=utf-8 7.6853ms
+2025-05-16 18:02:23.453 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/ application/x-www-form-urlencoded 215
+2025-05-16 18:02:23.453 +01:00 [INF] Executing endpoint '/Index'
+2025-05-16 18:02:23.453 +01:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-05-16 18:02:23.454 +01:00 [INF] Executing handler method BPCalculator.Pages.BloodPressureModel.OnPost - ModelState is "Valid"
+2025-05-16 18:02:23.454 +01:00 [INF] Executed handler method OnPost, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-05-16 18:02:23.458 +01:00 [INF] Executed page /Index in 4.6471ms
+2025-05-16 18:02:23.458 +01:00 [INF] Executed endpoint '/Index'
+2025-05-16 18:02:23.458 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/ application/x-www-form-urlencoded 215 - 200 - text/html;+charset=utf-8 5.4123ms
+2025-05-16 18:02:27.212 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/ application/x-www-form-urlencoded 215
+2025-05-16 18:02:27.213 +01:00 [INF] Executing endpoint '/Index'
+2025-05-16 18:02:27.213 +01:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-05-16 18:02:27.213 +01:00 [INF] Executing handler method BPCalculator.Pages.BloodPressureModel.OnPost - ModelState is "Valid"
+2025-05-16 18:02:27.213 +01:00 [INF] Executed handler method OnPost, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-05-16 18:02:27.215 +01:00 [INF] Executed page /Index in 1.9401ms
+2025-05-16 18:02:27.215 +01:00 [INF] Executed endpoint '/Index'
+2025-05-16 18:02:27.215 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/ application/x-www-form-urlencoded 215 - 200 - text/html;+charset=utf-8 2.6049ms
+2025-05-16 18:02:33.290 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/ application/x-www-form-urlencoded 215
+2025-05-16 18:02:33.290 +01:00 [INF] Executing endpoint '/Index'
+2025-05-16 18:02:33.290 +01:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-05-16 18:02:33.290 +01:00 [INF] Executing handler method BPCalculator.Pages.BloodPressureModel.OnPost - ModelState is "Valid"
+2025-05-16 18:02:33.290 +01:00 [INF] Executed handler method OnPost, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-05-16 18:02:33.291 +01:00 [INF] Executed page /Index in 1.4069ms
+2025-05-16 18:02:33.291 +01:00 [INF] Executed endpoint '/Index'
+2025-05-16 18:02:33.291 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/ application/x-www-form-urlencoded 215 - 200 - text/html;+charset=utf-8 1.8187ms
+2025-05-16 18:03:11.161 +01:00 [INF] Starting up the application
+2025-05-16 18:03:12.865 +01:00 [INF] User profile is available. Using 'C:\Users\miaku\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-16 18:03:13.149 +01:00 [INF] Inside Configure method
+2025-05-16 18:03:13.256 +01:00 [INF] Now listening on: http://localhost:5000
+2025-05-16 18:03:13.256 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-16 18:03:13.257 +01:00 [INF] Hosting environment: Development
+2025-05-16 18:03:13.257 +01:00 [INF] Content root path: C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator
+2025-05-16 18:03:51.214 +01:00 [INF] Starting up the application
+2025-05-16 18:03:52.306 +01:00 [INF] User profile is available. Using 'C:\Users\miaku\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-16 18:03:52.508 +01:00 [INF] Inside Configure method
+2025-05-16 18:03:52.545 +01:00 [INF] Now listening on: http://localhost:5000
+2025-05-16 18:03:52.546 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-16 18:03:52.547 +01:00 [INF] Hosting environment: Development
+2025-05-16 18:03:52.548 +01:00 [INF] Content root path: C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator
+2025-05-16 18:04:25.819 +01:00 [INF] Starting up the application
+2025-05-16 18:04:27.170 +01:00 [INF] User profile is available. Using 'C:\Users\miaku\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-16 18:04:27.444 +01:00 [INF] Inside Configure method
+2025-05-16 18:04:27.544 +01:00 [INF] Now listening on: http://localhost:5000
+2025-05-16 18:04:27.545 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-16 18:04:27.545 +01:00 [INF] Hosting environment: Development
+2025-05-16 18:04:27.546 +01:00 [INF] Content root path: C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator
