@@ -2,7 +2,7 @@
 
 namespace BPTests;
 
-public class UnitTest1
+public class BloodPressureTests
 {
     [Fact]
     public void Test1()
