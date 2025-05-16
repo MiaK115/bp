@@ -13,11 +13,9 @@ namespace BPCalculator
 {
     public class Startup
     {
-        private readonly ILogger<Startup> _logger;
-        public Startup(IConfiguration configuration, ILogger<Startup> logger)
+        public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            _logger = logger;
         }
 
         public IConfiguration Configuration { get; }
@@ -25,7 +23,6 @@ namespace BPCalculator
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            _logger.LogInformation("Configuring services...");
             services.AddRazorPages();
         }
 
@@ -52,7 +49,8 @@ namespace BPCalculator
                 endpoints.MapRazorPages();
             });
 
-            _logger.LogInformation("Configuring middleware pipeline...");
+            var logger = app.ApplicationServices.GetRequiredService<ILogger<Startup>>();
+            logger.LogInformation("Inside Configure method");
         }
     }
 }
