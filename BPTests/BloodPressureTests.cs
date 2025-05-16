@@ -13,7 +13,6 @@ namespace BPTests
         [InlineData(90, 60, BPCategory.Ideal)]
         [InlineData(120, 60, BPCategory.Ideal)]
         [InlineData(90, 80, BPCategory.Ideal)]
-        [InlineData(90, 60, BPCategory.Ideal)]
         [InlineData(120, 80, BPCategory.Ideal)]
         [InlineData(90, 81, BPCategory.PreHigh)]
         [InlineData(120, 81, BPCategory.PreHigh)]
