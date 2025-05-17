@@ -4,6 +4,31 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        // {
+        //     "name": ".NET Core Launch (web)",
+        //     "type": "coreclr",
+        //     "request": "launch",
+        //     "preLaunchTask": "build",
+        //     "program": "${workspaceFolder}/BPCalculator/bin/Debug/net6.0/BPCalculator.dll",
+        //     "args": [],
+        //     "cwd": "${workspaceFolder}/BPCalculator",
+        //     "stopAtEntry": false,
+        //     "serverReadyAction": {
+        //         "action": "openExternally",
+        //         "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+        //     },
+        //     "env": {
+        //         "ASPNETCORE_ENVIRONMENT": "Development"
+        //     },
+        //     "sourceFileMap": {
+        //         "/Views": "${workspaceFolder}/Views"
+        //     }
+        // },
+        // {
+        //     "name": ".NET Core Attach",
+        //     "type": "coreclr",
+        //     "request": "attach"
+        // }
         {
             "name": ".NET Core Launch (web)",
             "type": "coreclr",
@@ -20,8 +45,14 @@
             "env": {
                 "ASPNETCORE_ENVIRONMENT": "Development"
             },
-            "sourceFileMap": {
-                "/Views": "${workspaceFolder}/Views"
+            "dotnetRunMessages": true,
+            "launchBrowser": {
+                "enabled": false,
+                "args": "http://localhost:5000",
+                "windows": {
+                    "command": "cmd.exe",
+                    "args": "/C start http://localhost:5000"
+                }
             }
         },
         {
