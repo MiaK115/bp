@@ -30,3 +30,23 @@ System.IO.IOException: Failed to bind to address http://127.0.0.1:5000: address 
    at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
    at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
    at BPCalculator.Program.Main(String[] args) in C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\Program.cs:line 29
+2025-05-17 12:07:10.853 +01:00 [INF] Starting up the application
+2025-05-17 12:07:12.147 +01:00 [INF] User profile is available. Using 'C:\Users\miaku\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-17 12:07:13.106 +01:00 [INF] Inside Configure method
+2025-05-17 12:07:13.214 +01:00 [INF] Now listening on: http://localhost:5000
+2025-05-17 12:07:13.215 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-17 12:07:13.215 +01:00 [INF] Hosting environment: Development
+2025-05-17 12:07:13.216 +01:00 [INF] Content root path: C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator
+2025-05-17 12:07:13.444 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - -
+2025-05-17 12:07:13.505 +01:00 [INF] Executing endpoint '/Index'
+2025-05-17 12:07:13.672 +01:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-05-17 12:07:13.703 +01:00 [INF] Executing handler method BPCalculator.Pages.BloodPressureModel.OnGet - ModelState is "Valid"
+2025-05-17 12:07:13.712 +01:00 [INF] Feature triggered: user accessed the Index page.
+2025-05-17 12:07:13.713 +01:00 [INF] User input: Systolic = 140, Diastolic = 90
+2025-05-17 12:07:13.714 +01:00 [INF] Calculated category: High Blood Pressure
+2025-05-17 12:07:13.715 +01:00 [INF] Executed handler method OnGet, returned result .
+2025-05-17 12:07:13.724 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-05-17 12:07:13.724 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-05-17 12:07:14.013 +01:00 [INF] Executed page /Index in 332.2626ms
+2025-05-17 12:07:14.016 +01:00 [INF] Executed endpoint '/Index'
+2025-05-17 12:07:14.024 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - - - 200 - text/html;+charset=utf-8 588.8826ms
