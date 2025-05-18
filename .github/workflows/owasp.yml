@@ -5,10 +5,10 @@ on:
     branches: [ "dev" ]
   pull_request:
     branches: [ "dev" ]
+  workflow_dispatch:
 
 permissions:
   contents: read
-  id-token: write
 
 jobs:
   dependency-check:
@@ -30,7 +30,7 @@ jobs:
             --out /src/dependency-check-report
 
       - name: Upload OWASP Report
-        uses: actions/upload-artifact@v3.1.2
+        uses: actions/upload-artifact@v3
         with:
           name: dependency-check-report
           path: dependency-check-report
