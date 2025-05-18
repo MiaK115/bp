@@ -81,3 +81,23 @@
 2025-05-18 17:57:54.934 +01:00 [INF] Executed page /Index in 1669.217ms
 2025-05-18 17:57:54.939 +01:00 [INF] Executed endpoint '/Index'
 2025-05-18 17:57:54.944 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - - - 200 - text/html;+charset=utf-8 2599.5785ms
+2025-05-18 19:59:11.459 +01:00 [INF] Starting up the application
+2025-05-18 19:59:12.039 +01:00 [INF] User profile is available. Using 'C:\Users\miaku\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-18 19:59:12.183 +01:00 [INF] Inside Configure method
+2025-05-18 19:59:12.223 +01:00 [INF] Now listening on: http://localhost:5000
+2025-05-18 19:59:12.223 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-18 19:59:12.224 +01:00 [INF] Hosting environment: Development
+2025-05-18 19:59:12.224 +01:00 [INF] Content root path: C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator
+2025-05-18 19:59:12.609 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - -
+2025-05-18 19:59:12.740 +01:00 [INF] Executing endpoint '/Index'
+2025-05-18 19:59:12.894 +01:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-05-18 19:59:12.926 +01:00 [INF] Executing handler method BPCalculator.Pages.BloodPressureModel.OnGet - ModelState is "Valid"
+2025-05-18 19:59:12.932 +01:00 [INF] Feature triggered: user accessed the Index page.
+2025-05-18 19:59:12.933 +01:00 [INF] User input: Systolic = 140, Diastolic = 90
+2025-05-18 19:59:12.934 +01:00 [INF] Calculated category: High Blood Pressure
+2025-05-18 19:59:12.934 +01:00 [INF] Executed handler method OnGet, returned result .
+2025-05-18 19:59:12.943 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-05-18 19:59:12.944 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-05-18 19:59:13.245 +01:00 [INF] Executed page /Index in 332.3183ms
+2025-05-18 19:59:13.247 +01:00 [INF] Executed endpoint '/Index'
+2025-05-18 19:59:13.285 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - - - 200 - text/html;+charset=utf-8 680.3439ms
