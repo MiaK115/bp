@@ -50,3 +50,39 @@ System.IO.IOException: Failed to bind to address http://127.0.0.1:5000: address 
 2025-05-17 12:07:14.013 +01:00 [INF] Executed page /Index in 332.2626ms
 2025-05-17 12:07:14.016 +01:00 [INF] Executed endpoint '/Index'
 2025-05-17 12:07:14.024 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - - - 200 - text/html;+charset=utf-8 588.8826ms
+2025-05-17 13:11:49.836 +01:00 [INF] Starting up the application
+2025-05-17 13:11:51.633 +01:00 [INF] User profile is available. Using 'C:\Users\miaku\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-17 13:11:52.185 +01:00 [INF] Inside Configure method
+2025-05-17 13:11:52.293 +01:00 [INF] Now listening on: http://localhost:5000
+2025-05-17 13:11:52.294 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-17 13:11:52.296 +01:00 [INF] Hosting environment: Development
+2025-05-17 13:11:52.296 +01:00 [INF] Content root path: C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator
+2025-05-17 13:11:52.649 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - -
+2025-05-17 13:11:52.679 +01:00 [INF] Executing endpoint '/Index'
+2025-05-17 13:11:52.839 +01:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-05-17 13:11:52.862 +01:00 [INF] Executing handler method BPCalculator.Pages.BloodPressureModel.OnGet - ModelState is "Valid"
+2025-05-17 13:11:52.868 +01:00 [INF] Feature triggered: user accessed the Index page.
+2025-05-17 13:11:52.868 +01:00 [INF] User input: Systolic = 140, Diastolic = 90
+2025-05-17 13:11:52.870 +01:00 [INF] Calculated category: High Blood Pressure
+2025-05-17 13:11:52.870 +01:00 [INF] Executed handler method OnGet, returned result .
+2025-05-17 13:11:52.879 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-05-17 13:11:52.880 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-05-17 13:11:53.093 +01:00 [INF] Executed page /Index in 244.0804ms
+2025-05-17 13:11:53.095 +01:00 [INF] Executed endpoint '/Index'
+2025-05-17 13:11:53.101 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - - - 200 - text/html;+charset=utf-8 457.2651ms
+2025-05-17 13:11:55.410 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/ application/x-www-form-urlencoded 214
+2025-05-17 13:11:55.411 +01:00 [INF] Executing endpoint '/Index'
+2025-05-17 13:11:55.412 +01:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-05-17 13:11:55.448 +01:00 [INF] Executing handler method BPCalculator.Pages.BloodPressureModel.OnPost - ModelState is "Valid"
+2025-05-17 13:11:55.449 +01:00 [INF] Executed handler method OnPost, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-05-17 13:11:55.455 +01:00 [INF] Executed page /Index in 41.7276ms
+2025-05-17 13:11:55.456 +01:00 [INF] Executed endpoint '/Index'
+2025-05-17 13:11:55.457 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/ application/x-www-form-urlencoded 214 - 200 - text/html;+charset=utf-8 47.1567ms
+2025-05-17 13:12:00.151 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/ application/x-www-form-urlencoded 214
+2025-05-17 13:12:00.152 +01:00 [INF] Executing endpoint '/Index'
+2025-05-17 13:12:00.152 +01:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-05-17 13:12:00.161 +01:00 [INF] Executing handler method BPCalculator.Pages.BloodPressureModel.OnPost - ModelState is "Valid"
+2025-05-17 13:12:00.162 +01:00 [INF] Executed handler method OnPost, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-05-17 13:12:00.179 +01:00 [INF] Executed page /Index in 25.9608ms
+2025-05-17 13:12:00.180 +01:00 [INF] Executed endpoint '/Index'
+2025-05-17 13:12:00.181 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/ application/x-www-form-urlencoded 214 - 200 - text/html;+charset=utf-8 29.6893ms
