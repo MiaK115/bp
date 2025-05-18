@@ -1,0 +1,13 @@
+Feature: Blood Pressure Category Calculation
+
+  Scenario: Classify low blood pressure
+    Given the systolic pressure is 85
+    And the diastolic pressure is 55
+    When the category is calculated
+    Then the result should be "Low"
+
+  Scenario: Classify ideal blood pressure
+    Given the systolic pressure is 115
+    And the diastolic pressure is 75
+    When the category is calculated
+    Then the result should be "Ideal"

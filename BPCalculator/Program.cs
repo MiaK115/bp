@@ -16,12 +16,16 @@ namespace BPCalculator
         public static void Main(string[] args)
         {
             Log.Logger = new LoggerConfiguration()
+                .WriteTo.Console()
                 .WriteTo.File("logs/log.txt", rollingInterval: RollingInterval.Day)
                 .CreateLogger();
 
             try
             {
                 Log.Information("Starting up the application");
+
+                Console.WriteLine("Now listening on: http://localhost:5000");
+
                 CreateHostBuilder(args).Build().Run();
             }
             catch (Exception ex)
@@ -33,8 +37,6 @@ namespace BPCalculator
                 Log.CloseAndFlush();
             }
 
-            CreateHostBuilder(args).Build().Run();
-
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -44,6 +46,9 @@ namespace BPCalculator
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+
+
     }
+
 }
 //

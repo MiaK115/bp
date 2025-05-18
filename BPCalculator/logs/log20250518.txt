@@ -1,0 +1,63 @@
+2025-05-18 16:03:55.237 +01:00 [INF] Starting up the application
+2025-05-18 16:04:02.724 +01:00 [INF] User profile is available. Using 'C:\Users\miaku\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-18 16:04:03.101 +01:00 [INF] Inside Configure method
+2025-05-18 16:04:03.195 +01:00 [INF] Now listening on: http://localhost:5000
+2025-05-18 16:04:03.196 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-18 16:04:03.196 +01:00 [INF] Hosting environment: Development
+2025-05-18 16:04:03.197 +01:00 [INF] Content root path: C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator
+2025-05-18 16:05:51.452 +01:00 [INF] Starting up the application
+2025-05-18 16:05:52.916 +01:00 [INF] User profile is available. Using 'C:\Users\miaku\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-18 16:05:53.266 +01:00 [INF] Inside Configure method
+2025-05-18 16:05:53.339 +01:00 [INF] Now listening on: http://localhost:5000
+2025-05-18 16:05:53.339 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-18 16:05:53.340 +01:00 [INF] Hosting environment: Development
+2025-05-18 16:05:53.340 +01:00 [INF] Content root path: C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator
+2025-05-18 16:05:53.462 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - -
+2025-05-18 16:05:53.496 +01:00 [INF] Executing endpoint '/Index'
+2025-05-18 16:05:53.664 +01:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-05-18 16:05:53.695 +01:00 [INF] Executing handler method BPCalculator.Pages.BloodPressureModel.OnGet - ModelState is "Valid"
+2025-05-18 16:05:53.702 +01:00 [INF] Feature triggered: user accessed the Index page.
+2025-05-18 16:05:53.703 +01:00 [INF] User input: Systolic = 140, Diastolic = 90
+2025-05-18 16:05:53.704 +01:00 [INF] Calculated category: High Blood Pressure
+2025-05-18 16:05:53.704 +01:00 [INF] Executed handler method OnGet, returned result .
+2025-05-18 16:05:53.714 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-05-18 16:05:53.715 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-05-18 16:05:54.011 +01:00 [INF] Executed page /Index in 339.6538ms
+2025-05-18 16:05:54.014 +01:00 [INF] Executed endpoint '/Index'
+2025-05-18 16:05:54.021 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - - - 200 - text/html;+charset=utf-8 563.9214ms
+2025-05-18 16:05:57.320 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/ application/x-www-form-urlencoded 214
+2025-05-18 16:05:57.321 +01:00 [INF] Executing endpoint '/Index'
+2025-05-18 16:05:57.322 +01:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-05-18 16:05:57.377 +01:00 [INF] Executing handler method BPCalculator.Pages.BloodPressureModel.OnPost - ModelState is "Valid"
+2025-05-18 16:05:57.379 +01:00 [INF] Executed handler method OnPost, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-05-18 16:05:57.388 +01:00 [INF] Executed page /Index in 65.155ms
+2025-05-18 16:05:57.389 +01:00 [INF] Executed endpoint '/Index'
+2025-05-18 16:05:57.389 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/ application/x-www-form-urlencoded 214 - 200 - text/html;+charset=utf-8 68.9401ms
+2025-05-18 16:06:02.952 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/ application/x-www-form-urlencoded 214
+2025-05-18 16:06:02.953 +01:00 [INF] Executing endpoint '/Index'
+2025-05-18 16:06:02.955 +01:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-05-18 16:06:02.958 +01:00 [INF] Executing handler method BPCalculator.Pages.BloodPressureModel.OnPost - ModelState is "Valid"
+2025-05-18 16:06:02.958 +01:00 [INF] Executed handler method OnPost, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-05-18 16:06:02.967 +01:00 [INF] Executed page /Index in 11.8215ms
+2025-05-18 16:06:02.967 +01:00 [INF] Executed endpoint '/Index'
+2025-05-18 16:06:02.968 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/ application/x-www-form-urlencoded 214 - 200 - text/html;+charset=utf-8 15.7271ms
+2025-05-18 16:28:27.146 +01:00 [INF] Starting up the application
+2025-05-18 16:28:29.184 +01:00 [INF] User profile is available. Using 'C:\Users\miaku\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-18 16:28:29.886 +01:00 [INF] Inside Configure method
+2025-05-18 16:28:30.036 +01:00 [INF] Now listening on: http://localhost:5000
+2025-05-18 16:28:30.037 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-18 16:28:30.038 +01:00 [INF] Hosting environment: Development
+2025-05-18 16:28:30.040 +01:00 [INF] Content root path: C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator
+2025-05-18 16:28:30.401 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - -
+2025-05-18 16:28:30.470 +01:00 [INF] Executing endpoint '/Index'
+2025-05-18 16:28:30.642 +01:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-05-18 16:28:30.690 +01:00 [INF] Executing handler method BPCalculator.Pages.BloodPressureModel.OnGet - ModelState is "Valid"
+2025-05-18 16:28:30.705 +01:00 [INF] Feature triggered: user accessed the Index page.
+2025-05-18 16:28:30.707 +01:00 [INF] User input: Systolic = 140, Diastolic = 90
+2025-05-18 16:28:30.710 +01:00 [INF] Calculated category: High Blood Pressure
+2025-05-18 16:28:30.712 +01:00 [INF] Executed handler method OnGet, returned result .
+2025-05-18 16:28:30.722 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-05-18 16:28:30.723 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-05-18 16:28:31.120 +01:00 [INF] Executed page /Index in 453.4183ms
+2025-05-18 16:28:31.123 +01:00 [INF] Executed endpoint '/Index'
+2025-05-18 16:28:31.141 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - - - 200 - text/html;+charset=utf-8 753.7649ms
