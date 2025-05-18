@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ "dev" ]
 
+permissions:
+  contents: read
+  id-token: write
+
 jobs:
   dependency-check:
     name: Run OWASP Dependency-Check
@@ -26,7 +30,7 @@ jobs:
             --out /src/dependency-check-report
 
       - name: Upload OWASP Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3.1.2
         with:
           name: dependency-check-report
           path: dependency-check-report
