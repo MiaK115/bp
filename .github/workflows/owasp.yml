@@ -30,12 +30,15 @@ jobs:
             --project "bp" \
             --scan /src/BPCalculator \
             --format "HTML" \
-            --out /src/dependency-check-report
+            --out /src/dependency-check-report \
+            --failOnCVSS 11
 
       - name: Archive OWASP Report
         run: |
           zip -r dependency-check-report.zip dependency-check-report
 
-      - name: Display OWASP Report Path
-        run: |
-          echo "Report archived at ${{ github.workspace }}/dependency-check-report.zip"
+      - name: Upload OWASP Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: dependency-check-report
+          path: dependency-check-report.zip
