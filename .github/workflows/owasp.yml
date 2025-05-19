@@ -28,8 +28,10 @@ jobs:
             --format "HTML" \
             --out /src/dependency-check-report
 
-      - name: Upload OWASP Report
-        uses: actions/upload-artifact@v3.1.2
-        with:
-          name: dependency-check-report
-          path: dependency-check-report
+      - name: Archive OWASP Report
+        run: |
+         zip -r dependency-check-report.zip dependency-check-report
+
+      - name: Display OWASP Report Path
+        run: |
+         echo "Report archived at ${{ github.workspace }}/dependency-check-report.zip"
