@@ -29,7 +29,6 @@ jobs:
             owasp/dependency-check \
             --project "bp" \
             --scan /src/BPCalculator \
-            --failOnCVSS 11
             --format "HTML" \
             --out /src/dependency-check-report \
             --failOnCVSS 11
