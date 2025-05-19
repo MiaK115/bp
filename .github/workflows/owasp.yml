@@ -37,8 +37,6 @@ jobs:
         run: |
           zip -r dependency-check-report.zip dependency-check-report
 
-      - name: Upload OWASP Report
-        uses: actions/upload-artifact@v2
-        with:
-          name: dependency-check-report
-          path: dependency-check-report.zip
+      - name: Echo OWASP Report Path
+        run: |
+          echo "Report is at ${{ github.workspace }}/dependency-check-report.zip"
