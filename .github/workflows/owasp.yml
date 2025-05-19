@@ -29,6 +29,7 @@ jobs:
             owasp/dependency-check \
             --project "bp" \
             --scan /src/BPCalculator \
+            --failOnCVSS 11
             --format "HTML" \
             --out /src/dependency-check-report \
             --failOnCVSS 11
@@ -37,6 +38,6 @@ jobs:
         run: |
           zip -r dependency-check-report.zip dependency-check-report
 
-      - name: Echo OWASP Report Path
+      - name: Print Report Path
         run: |
-          echo "Report is at ${{ github.workspace }}/dependency-check-report.zip"
+          echo "Report created: ${{ github.workspace }}/dependency-check-report.zip"
