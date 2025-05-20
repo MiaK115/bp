@@ -31,16 +31,24 @@ jobs:
         run: dotnet build --no-restore --configuration Release
 
       - name: Run Unit & BDD Tests with Coverage
-        run: |
-          dotnet test --no-build --configuration Release --collect:"XPlat Code Coverage"
+        run: dotnet test --no-build --configuration Release --collect:"XPlat Code Coverage"
 
-      - name: Find coverage file
+      - name: Debug: List Coverage Files
+        run: |
+          echo "🔍 Looking for coverage files..."
+          find . -type f -name 'coverage.cobertura.xml'
+
+      - name: Find Coverage File
         id: coverage
         run: |
-          echo "##[debug] Locating coverage file..."
           path=$(find . -type f -name 'coverage.cobertura.xml' | head -n 1)
-          echo "Found coverage file at: $path"
-          echo "path=$path" >> $GITHUB_OUTPUT
+          if [ -z "$path" ]; then
+            echo "❌ No coverage file found"
+            exit 1
+          else
+            echo "✅ Found coverage file at: $path"
+            echo "path=$path" >> $GITHUB_OUTPUT
+          fi
 
       - name: Generate Code Coverage Report
         uses: danielpalme/ReportGenerator-GitHub-Action@5.1.26
@@ -50,12 +58,10 @@ jobs:
           reporttypes: 'HtmlInline_AzurePipelines'
 
       - name: Archive Code Coverage Report
-        run: |
-          zip -r code-coverage-report.zip coveragereport
+        run: zip -r code-coverage-report.zip coveragereport
 
       - name: Show Coverage File Path
-        run: |
-          echo "Coverage report saved as: ${{ github.workspace }}/code-coverage-report.zip"
+        run: echo "📁 Coverage report saved at: ${{ github.workspace }}/code-coverage-report.zip"
 
       - name: Audit .NET Dependencies
         run: dotnet list package --vulnerable --no-build
