@@ -42,11 +42,13 @@ jobs:
           targetdir: 'coveragereport'
           reporttypes: 'HtmlInline_AzurePipelines'
 
-      - name: Upload Code Coverage Report
-        uses: actions/upload-artifact@v3
-        with:
-          name: code-coverage-report
-          path: coveragereport
+      - name: Archive Code Coverage Report
+        run: |
+          zip -r code-coverage-report.zip coveragereport
+
+      - name: Show Coverage File Path
+        run: |
+          echo "Coverage report saved as: ${{ github.workspace }}/code-coverage-report.zip"
 
       - name: Audit .NET Dependencies
-        run: dotnet list package --vulnerable
+        run: dotnet list package --vulnerable --no-build
