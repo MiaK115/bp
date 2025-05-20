@@ -33,7 +33,7 @@ jobs:
       - name: Run Unit & BDD Tests with Coverage
         run: dotnet test --no-build --configuration Release --collect:"XPlat Code Coverage"
 
-      - name: Debug: List Coverage Files
+      - name: Debug
         run: |
           echo "🔍 Looking for coverage files..."
           find . -type f -name 'coverage.cobertura.xml'
@@ -61,7 +61,7 @@ jobs:
         run: zip -r code-coverage-report.zip coveragereport
 
       - name: Show Coverage File Path
-        run: echo "📁 Coverage report saved at: ${{ github.workspace }}/code-coverage-report.zip"
+        run: echo "📁 Coverage report saved at ${{ github.workspace }}/code-coverage-report.zip"
 
       - name: Audit .NET Dependencies
         run: dotnet list package --vulnerable --no-build
