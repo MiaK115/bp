@@ -34,4 +34,4 @@ jobs:
         run: dotnet test --no-build --configuration Release
 
       - name: Audit .NET Packages for Vulnerabilities
-        run: dotnet list package --vulnerable --no-build
+        run: dotnet list package --vulnerable
