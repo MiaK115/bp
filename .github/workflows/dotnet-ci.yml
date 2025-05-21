@@ -1,4 +1,4 @@
-name: .NET CI Pipeline
+name: .NET Minimal CI
 
 on:
   push:
@@ -11,8 +11,8 @@ permissions:
   contents: read
 
 jobs:
-  build-and-test:
-    name: Build, Test, Coverage, Audit
+  test-and-audit:
+    name: Run Tests and Audit Packages
     runs-on: ubuntu-latest
 
     steps:
@@ -27,26 +27,11 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore
 
-      - name: Build
-        run: dotnet build --no-restore --configuration Release
+      - name: Build solution
+        run: dotnet build --configuration Release --no-restore
 
-      - name: Run Unit & BDD Tests with Coverage
-        run: |
-          dotnet test --no-build --collect:"XPlat Code Coverage" \
-            --settings coverlet.runsettings
+      - name: Run Unit and BDD Tests
+        run: dotnet test --no-build --configuration Release
 
-      - name: Generate Code Coverage Report
-        uses: danielpalme/ReportGenerator-GitHub-Action@5.1.26
-        with:
-          reports: '**/coverage.cobertura.xml'
-          targetdir: 'coveragereport'
-          reporttypes: 'HtmlInline_AzurePipelines'
-
-      - name: Upload Code Coverage Report
-        uses: actions/upload-artifact@v3
-        with:
-          name: code-coverage-report
-          path: coveragereport
-
-      - name: Audit .NET Dependencies
+      - name: Audit .NET Packages for Vulnerabilities
         run: dotnet list package --vulnerable
