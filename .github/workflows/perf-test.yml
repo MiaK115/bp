@@ -1,0 +1,48 @@
+name: k6 Performance Test
+
+on:
+  pull_request:
+    branches: [ dev ]
+  push:
+    branches: [ dev ]
+  workflow_dispatch:
+
+jobs:
+  perf-test:
+    runs-on: ubuntu-latest
+
+    services:
+      # Optional: you could define external services here if needed (like a database)
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.x'
+
+      - name: Restore and build the app
+        run: |
+          dotnet restore
+          dotnet build --no-restore
+
+      - name: Run app in background
+        run: |
+          nohup dotnet run --project BPCalculator > app.log 2>&1 &
+          echo "Waiting for app to start..."
+          sleep 10
+          curl --retry 5 --retry-connrefused --retry-delay 2 http://localhost:5000 || (echo "App failed to start" && exit 1)
+
+      - name: Install k6
+        run: |
+          sudo apt update
+          sudo apt install -y gnupg software-properties-common
+          curl -s https://dl.k6.io/key.gpg | sudo gpg --dearmor -o /usr/share/keyrings/k6-archive-keyring.gpg
+          echo "deb [signed-by=/usr/share/keyrings/k6-archive-keyring.gpg] https://dl.k6.io/deb stable main" | sudo tee /etc/apt/sources.list.d/k6.list
+          sudo apt update
+          sudo apt install -y k6
+
+      - name: Run performance test with k6
+        run: k6 run perf/loadtest.js

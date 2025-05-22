@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "A simple ASP.NET Core Razor Pages web application that allows users to input their blood pressure values and get categorized feedback based on medical thresholds (Low, Ideal, Pre-High, High).",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "perf": "k6 run perf/loadtest.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MiaK115/bp.git"
