@@ -1,0 +1,336 @@
+2025-05-22 19:46:21.171 +01:00 [INF] Starting up the application
+2025-05-22 19:46:21.985 +01:00 [INF] User profile is available. Using 'C:\Users\miaku\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-22 19:46:22.380 +01:00 [INF] Inside Configure method
+2025-05-22 19:46:22.739 +01:00 [FTL] Application start-up failed
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5000: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+ ---> System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass30_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IEnumerable`1 listenOptions, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at BPCalculator.Program.Main(String[] args)
+2025-05-22 19:47:26.980 +01:00 [INF] Starting up the application
+2025-05-22 19:47:27.450 +01:00 [INF] User profile is available. Using 'C:\Users\miaku\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-22 19:47:27.599 +01:00 [INF] Inside Configure method
+2025-05-22 19:47:27.649 +01:00 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5000: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+ ---> System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2025-05-22 19:47:27.707 +01:00 [FTL] Application start-up failed
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5000: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+ ---> System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at BPCalculator.Program.Main(String[] args) in C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\Program.cs:line 29
+2025-05-22 19:52:14.552 +01:00 [INF] Starting up the application
+2025-05-22 19:52:15.519 +01:00 [INF] User profile is available. Using 'C:\Users\miaku\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-22 19:52:15.906 +01:00 [INF] Inside Configure method
+2025-05-22 19:52:15.976 +01:00 [INF] Now listening on: http://localhost:5000
+2025-05-22 19:52:15.995 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-22 19:52:16.026 +01:00 [INF] Hosting environment: Development
+2025-05-22 19:52:16.060 +01:00 [INF] Content root path: C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator
+2025-05-22 19:57:47.065 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2025-05-22 19:57:47.065 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2025-05-22 19:57:47.127 +01:00 [INF] Executing endpoint '/Index'
+2025-05-22 19:57:47.127 +01:00 [INF] Executing endpoint '/Index'
+2025-05-22 19:57:47.265 +01:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-05-22 19:57:47.265 +01:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-05-22 19:57:47.291 +01:00 [INF] Executing handler method BPCalculator.Pages.BloodPressureModel.OnGet - ModelState is "Valid"
+2025-05-22 19:57:47.291 +01:00 [INF] Executing handler method BPCalculator.Pages.BloodPressureModel.OnGet - ModelState is "Valid"
+2025-05-22 19:57:47.296 +01:00 [INF] Feature triggered: user accessed the Index page.
+2025-05-22 19:57:47.296 +01:00 [INF] Feature triggered: user accessed the Index page.
+2025-05-22 19:57:47.299 +01:00 [INF] User input: Systolic = 140, Diastolic = 90
+2025-05-22 19:57:47.299 +01:00 [INF] User input: Systolic = 140, Diastolic = 90
+2025-05-22 19:57:47.301 +01:00 [INF] Calculated category: High Blood Pressure
+2025-05-22 19:57:47.303 +01:00 [INF] Calculated category: High Blood Pressure
+2025-05-22 19:57:47.304 +01:00 [INF] Executed handler method OnGet, returned result .
+2025-05-22 19:57:47.305 +01:00 [INF] Executed handler method OnGet, returned result .
+2025-05-22 19:57:47.311 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-05-22 19:57:47.311 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-05-22 19:57:47.315 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-05-22 19:57:47.315 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-05-22 19:57:47.639 +01:00 [INF] Executed page /Index in 364.3822ms
+2025-05-22 19:57:47.666 +01:00 [INF] Executed page /Index in 395.8864ms
+2025-05-22 19:57:47.692 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2025-05-22 19:57:47.786 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2025-05-22 19:57:47.801 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/css/site.css - null null
+2025-05-22 19:57:47.802 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/css/site.css - null null
+2025-05-22 19:57:47.806 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.min.js - null null
+2025-05-22 19:57:47.806 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2025-05-22 19:57:47.821 +01:00 [INF] Executed endpoint '/Index'
+2025-05-22 19:57:47.821 +01:00 [INF] Executed endpoint '/Index'
+2025-05-22 19:57:47.853 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.min.js - null null
+2025-05-22 19:57:47.855 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2025-05-22 19:57:47.860 +01:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\css\site.css'
+2025-05-22 19:57:47.860 +01:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\css\site.css'
+2025-05-22 19:57:47.875 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/js/site.js?v=dLGP40S79Xnx6GqUthRF6NWvjvhQ1nOvdVSwaNcgG18 - null null
+2025-05-22 19:57:47.885 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/js/site.js?v=dLGP40S79Xnx6GqUthRF6NWvjvhQ1nOvdVSwaNcgG18 - null null
+2025-05-22 19:57:47.893 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 200 null text/html; charset=utf-8 832.917ms
+2025-05-22 19:57:47.894 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2025-05-22 19:57:47.898 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 200 null text/html; charset=utf-8 838.5928ms
+2025-05-22 19:57:47.905 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2025-05-22 19:57:47.911 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2025-05-22 19:57:47.911 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/css/site.css - 200 1417 text/css 110.0191ms
+2025-05-22 19:57:47.914 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/css/site.css - 200 1417 text/css 111.9007ms
+2025-05-22 19:57:47.919 +01:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\lib\jquery\dist\jquery.min.js'
+2025-05-22 19:57:47.924 +01:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\lib\jquery\dist\jquery.min.js'
+2025-05-22 19:57:47.930 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - null null
+2025-05-22 19:57:47.931 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 78641 text/javascript 125.2393ms
+2025-05-22 19:57:47.939 +01:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\js\site.js'
+2025-05-22 19:57:47.942 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.min.css - 200 155764 text/css 250.7057ms
+2025-05-22 19:57:47.945 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.min.css - 200 155764 text/css 158.3469ms
+2025-05-22 19:57:47.951 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery-validation/dist/jquery.validate.min.js - null null
+2025-05-22 19:57:47.956 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery-validation/dist/jquery.validate.min.js - null null
+2025-05-22 19:57:47.957 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.min.js - 200 86929 text/javascript 104.2741ms
+2025-05-22 19:57:47.960 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.min.js - 200 86929 text/javascript 154.2218ms
+2025-05-22 19:57:47.965 +01:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\js\site.js'
+2025-05-22 19:57:47.995 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - null null
+2025-05-22 19:57:47.997 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/js/site.js?v=dLGP40S79Xnx6GqUthRF6NWvjvhQ1nOvdVSwaNcgG18 - 200 230 text/javascript 121.888ms
+2025-05-22 19:57:48.006 +01:00 [INF] Sending file. Request path: '/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js'
+2025-05-22 19:57:48.058 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2025-05-22 19:57:48.091 +01:00 [INF] Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.min.js'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js'
+2025-05-22 19:57:48.091 +01:00 [INF] Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.min.js'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js'
+2025-05-22 19:57:48.097 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/js/site.js?v=dLGP40S79Xnx6GqUthRF6NWvjvhQ1nOvdVSwaNcgG18 - 200 230 text/javascript 211.8135ms
+2025-05-22 19:57:48.283 +01:00 [INF] Sending file. Request path: '/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js'
+2025-05-22 19:57:48.347 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - 200 5871 text/javascript 352.5558ms
+2025-05-22 19:57:48.308 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 78641 text/javascript 452.8129ms
+2025-05-22 19:57:48.311 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/lib/jquery-validation/dist/jquery.validate.min.js - 200 23264 text/javascript 360.3129ms
+2025-05-22 19:57:48.326 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/lib/jquery-validation/dist/jquery.validate.min.js - 200 23264 text/javascript 370.5403ms
+2025-05-22 19:57:48.305 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - 200 5871 text/javascript 374.1215ms
+2025-05-22 19:57:48.818 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/ - application/x-www-form-urlencoded 263
+2025-05-22 19:57:49.068 +01:00 [INF] Executing endpoint '/Index'
+2025-05-22 19:57:49.096 +01:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-05-22 19:57:49.140 +01:00 [INF] Executing handler method BPCalculator.Pages.BloodPressureModel.OnPost - ModelState is "Valid"
+2025-05-22 19:57:49.156 +01:00 [INF] Executed handler method OnPost, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-05-22 19:57:49.172 +01:00 [INF] Executed page /Index in 72.676ms
+2025-05-22 19:57:49.401 +01:00 [INF] Executed endpoint '/Index'
+2025-05-22 19:57:49.421 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/ - 200 null text/html; charset=utf-8 602.728ms
+2025-05-22 19:57:51.005 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2025-05-22 19:57:51.469 +01:00 [INF] Executing endpoint '/Index'
+2025-05-22 19:57:51.472 +01:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-05-22 19:57:51.477 +01:00 [INF] Executing handler method BPCalculator.Pages.BloodPressureModel.OnGet - ModelState is "Valid"
+2025-05-22 19:57:51.481 +01:00 [INF] Feature triggered: user accessed the Index page.
+2025-05-22 19:57:51.484 +01:00 [INF] User input: Systolic = 140, Diastolic = 90
+2025-05-22 19:57:51.492 +01:00 [INF] Calculated category: High Blood Pressure
+2025-05-22 19:57:51.494 +01:00 [INF] Executed handler method OnGet, returned result .
+2025-05-22 19:57:51.754 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-05-22 19:57:51.758 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-05-22 19:57:51.767 +01:00 [INF] Executed page /Index in 292.3808ms
+2025-05-22 19:57:51.972 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/css/site.css - null null
+2025-05-22 19:57:51.969 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2025-05-22 19:57:52.008 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2025-05-22 19:57:52.013 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/js/site.js?v=dLGP40S79Xnx6GqUthRF6NWvjvhQ1nOvdVSwaNcgG18 - null null
+2025-05-22 19:57:52.132 +01:00 [INF] Executed endpoint '/Index'
+2025-05-22 19:57:54.738 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 200 null text/html; charset=utf-8 3733.3354ms
+2025-05-22 19:57:53.090 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2025-05-22 19:57:53.503 +01:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\css\site.css'
+2025-05-22 19:57:53.622 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2025-05-22 19:57:54.652 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2025-05-22 19:57:54.723 +01:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\js\site.js'
+2025-05-22 19:57:55.468 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/js/site.js?v=dLGP40S79Xnx6GqUthRF6NWvjvhQ1nOvdVSwaNcgG18 - 200 230 text/javascript 3454.6596ms
+2025-05-22 19:57:55.060 +01:00 [INF] Executing endpoint '/Index'
+2025-05-22 19:57:55.355 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2025-05-22 19:57:55.439 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/css/site.css - 200 1417 text/css 3466.51ms
+2025-05-22 19:57:55.444 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.min.css - 200 155764 text/css 3475.6521ms
+2025-05-22 19:57:55.454 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 78641 text/javascript 3445.1245ms
+2025-05-22 19:57:52.006 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.min.js - null null
+2025-05-22 19:57:55.501 +01:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-05-22 19:57:55.603 +01:00 [INF] Executing endpoint '/Index'
+2025-05-22 19:57:55.713 +01:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-05-22 19:57:55.624 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/ - null null
+2025-05-22 19:57:55.696 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - null null
+2025-05-22 19:57:55.709 +01:00 [INF] Executing handler method BPCalculator.Pages.BloodPressureModel.OnGet - ModelState is "Valid"
+2025-05-22 19:57:55.622 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery-validation/dist/jquery.validate.min.js - null null
+2025-05-22 19:57:55.719 +01:00 [INF] Executing handler method BPCalculator.Pages.BloodPressureModel.OnGet - ModelState is "Valid"
+2025-05-22 19:57:55.720 +01:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\lib\jquery\dist\jquery.min.js'
+2025-05-22 19:57:55.737 +01:00 [INF] Executing endpoint '/Index'
+2025-05-22 19:57:55.744 +01:00 [INF] Sending file. Request path: '/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js'
+2025-05-22 19:57:55.779 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - 200 5871 text/javascript 82.061ms
+2025-05-22 19:57:55.764 +01:00 [INF] Feature triggered: user accessed the Index page.
+2025-05-22 19:57:55.772 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.min.js - 200 86929 text/javascript 3765.3579ms
+2025-05-22 19:57:55.766 +01:00 [INF] Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.min.js'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js'
+2025-05-22 19:57:55.774 +01:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-05-22 19:57:55.745 +01:00 [INF] Feature triggered: user accessed the Index page.
+2025-05-22 19:57:55.788 +01:00 [INF] User input: Systolic = 140, Diastolic = 90
+2025-05-22 19:57:55.805 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/lib/jquery-validation/dist/jquery.validate.min.js - 200 23264 text/javascript 183.5175ms
+2025-05-22 19:57:55.809 +01:00 [INF] Executing handler method BPCalculator.Pages.BloodPressureModel.OnGet - ModelState is "Valid"
+2025-05-22 19:57:55.810 +01:00 [INF] User input: Systolic = 140, Diastolic = 90
+2025-05-22 19:57:55.815 +01:00 [INF] Calculated category: High Blood Pressure
+2025-05-22 19:57:55.823 +01:00 [INF] Feature triggered: user accessed the Index page.
+2025-05-22 19:57:55.873 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico - null null
+2025-05-22 19:57:55.888 +01:00 [INF] Calculated category: High Blood Pressure
+2025-05-22 19:57:55.896 +01:00 [INF] Executed handler method OnGet, returned result .
+2025-05-22 19:57:55.900 +01:00 [INF] User input: Systolic = 140, Diastolic = 90
+2025-05-22 19:57:55.907 +01:00 [INF] Executed handler method OnGet, returned result .
+2025-05-22 19:57:55.907 +01:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\favicon.ico'
+2025-05-22 19:57:55.920 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-05-22 19:57:55.949 +01:00 [INF] Calculated category: High Blood Pressure
+2025-05-22 19:57:55.979 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-05-22 19:57:56.017 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/favicon.ico - 200 32038 image/x-icon 144.3431ms
+2025-05-22 19:57:56.061 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-05-22 19:57:56.088 +01:00 [INF] Executed handler method OnGet, returned result .
+2025-05-22 19:57:56.090 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-05-22 19:57:56.120 +01:00 [INF] Executed page /Index in 401.5491ms
+2025-05-22 19:57:56.120 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-05-22 19:57:56.230 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2025-05-22 19:57:56.131 +01:00 [INF] Executed page /Index in 421.356ms
+2025-05-22 19:57:56.240 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2025-05-22 19:57:56.232 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/css/site.css - null null
+2025-05-22 19:57:56.245 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/css/site.css - null null
+2025-05-22 19:57:56.259 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.min.js - null null
+2025-05-22 19:57:56.262 +01:00 [INF] Executed endpoint '/Index'
+2025-05-22 19:57:56.264 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-05-22 19:57:56.272 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2025-05-22 19:57:56.281 +01:00 [INF] Executed endpoint '/Index'
+2025-05-22 19:57:56.299 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.min.js - null null
+2025-05-22 19:57:56.309 +01:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\css\site.css'
+2025-05-22 19:57:56.315 +01:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\css\site.css'
+2025-05-22 19:57:56.322 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/js/site.js?v=dLGP40S79Xnx6GqUthRF6NWvjvhQ1nOvdVSwaNcgG18 - null null
+2025-05-22 19:57:56.323 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 200 null text/html; charset=utf-8 968.659ms
+2025-05-22 19:57:56.328 +01:00 [INF] Executed page /Index in 519.9878ms
+2025-05-22 19:57:56.334 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2025-05-22 19:57:56.335 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 200 null text/html; charset=utf-8 3245.7848ms
+2025-05-22 19:57:56.342 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/js/site.js?v=dLGP40S79Xnx6GqUthRF6NWvjvhQ1nOvdVSwaNcgG18 - null null
+2025-05-22 19:57:56.346 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/css/site.css - 200 1417 text/css 113.8436ms
+2025-05-22 19:57:56.349 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/css/site.css - 200 1417 text/css 104.765ms
+2025-05-22 19:57:56.356 +01:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\js\site.js'
+2025-05-22 19:57:56.363 +01:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\lib\jquery\dist\jquery.min.js'
+2025-05-22 19:57:56.374 +01:00 [INF] Executed endpoint '/Index'
+2025-05-22 19:57:56.430 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2025-05-22 19:57:56.435 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - null null
+2025-05-22 19:57:56.442 +01:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\js\site.js'
+2025-05-22 19:57:56.447 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - null null
+2025-05-22 19:57:56.450 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery-validation/dist/jquery.validate.min.js - null null
+2025-05-22 19:57:56.457 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/js/site.js?v=dLGP40S79Xnx6GqUthRF6NWvjvhQ1nOvdVSwaNcgG18 - 200 230 text/javascript 135.7816ms
+2025-05-22 19:57:56.463 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.min.js - 200 86929 text/javascript 204.5089ms
+2025-05-22 19:57:56.466 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/ - 200 null text/html; charset=utf-8 842.1125ms
+2025-05-22 19:57:56.471 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 78641 text/javascript 198.3981ms
+2025-05-22 19:57:56.477 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery-validation/dist/jquery.validate.min.js - null null
+2025-05-22 19:57:56.479 +01:00 [INF] Sending file. Request path: '/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js'
+2025-05-22 19:57:56.718 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - 200 5871 text/javascript 282.4768ms
+2025-05-22 19:57:56.483 +01:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\lib\jquery\dist\jquery.min.js'
+2025-05-22 19:57:56.483 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/js/site.js?v=dLGP40S79Xnx6GqUthRF6NWvjvhQ1nOvdVSwaNcgG18 - 200 230 text/javascript 141.7557ms
+2025-05-22 19:57:56.506 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/css/site.css - null null
+2025-05-22 19:57:56.530 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.min.js - null null
+2025-05-22 19:57:56.616 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2025-05-22 19:57:56.617 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/js/site.js?v=dLGP40S79Xnx6GqUthRF6NWvjvhQ1nOvdVSwaNcgG18 - null null
+2025-05-22 19:57:56.623 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2025-05-22 19:57:56.626 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2025-05-22 19:57:56.626 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2025-05-22 19:57:56.634 +01:00 [INF] Sending file. Request path: '/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js'
+2025-05-22 19:57:56.665 +01:00 [INF] Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.min.js'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js'
+2025-05-22 19:57:56.792 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/lib/jquery-validation/dist/jquery.validate.min.js - 200 23264 text/javascript 341.8318ms
+2025-05-22 19:57:56.714 +01:00 [INF] Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.min.js'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js'
+2025-05-22 19:57:56.482 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2025-05-22 19:57:56.728 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.min.js - 200 86929 text/javascript 429.404ms
+2025-05-22 19:57:56.742 +01:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\css\site.css'
+2025-05-22 19:57:56.749 +01:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\lib\jquery\dist\jquery.min.js'
+2025-05-22 19:57:56.763 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2025-05-22 19:57:56.775 +01:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\js\site.js'
+2025-05-22 19:57:56.780 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.min.css - 200 155764 text/css 549.5816ms
+2025-05-22 19:57:56.782 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.min.css - 200 155764 text/css 541.9898ms
+2025-05-22 19:57:56.785 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 78641 text/javascript 450.8565ms
+2025-05-22 19:57:56.789 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - 200 5871 text/javascript 342.0791ms
+2025-05-22 19:57:56.688 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery-validation/dist/jquery.validate.min.js - null null
+2025-05-22 19:57:56.841 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/lib/jquery-validation/dist/jquery.validate.min.js - 200 23264 text/javascript 363.782ms
+2025-05-22 19:57:56.849 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2025-05-22 19:57:56.920 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/lib/jquery/dist/jquery.min.js - 200 86929 text/javascript 389.6237ms
+2025-05-22 19:57:56.920 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/css/site.css - 200 1417 text/css 407.3002ms
+2025-05-22 19:57:56.922 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 78641 text/javascript 306.4312ms
+2025-05-22 19:57:56.925 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/js/site.js?v=dLGP40S79Xnx6GqUthRF6NWvjvhQ1nOvdVSwaNcgG18 - 200 230 text/javascript 307.8102ms
+2025-05-22 19:57:57.284 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/ - application/x-www-form-urlencoded 263
+2025-05-22 19:57:57.410 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico - null null
+2025-05-22 19:57:57.786 +01:00 [INF] Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.min.js'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js'
+2025-05-22 19:57:57.797 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/lib/bootstrap/dist/css/bootstrap.min.css - 200 155764 text/css 1314.9381ms
+2025-05-22 19:57:57.807 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - null null
+2025-05-22 19:57:57.862 +01:00 [INF] Executing endpoint '/Index'
+2025-05-22 19:57:57.897 +01:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\favicon.ico'
+2025-05-22 19:57:57.899 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/lib/jquery-validation/dist/jquery.validate.min.js - 200 23264 text/javascript 1210.9782ms
+2025-05-22 19:57:57.908 +01:00 [INF] Sending file. Request path: '/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js'
+2025-05-22 19:57:57.909 +01:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-05-22 19:57:57.995 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/favicon.ico - 200 32038 image/x-icon 585.0683ms
+2025-05-22 19:57:58.246 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - 200 5871 text/javascript 439.7749ms
+2025-05-22 19:57:58.252 +01:00 [INF] Executing handler method BPCalculator.Pages.BloodPressureModel.OnPost - ModelState is "Valid"
+2025-05-22 19:57:58.299 +01:00 [INF] Executed handler method OnPost, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-05-22 19:57:58.305 +01:00 [INF] Executed page /Index in 57.0614ms
+2025-05-22 19:57:58.421 +01:00 [INF] Executed endpoint '/Index'
+2025-05-22 19:57:58.426 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/ - 200 null text/html; charset=utf-8 1141.9694ms
+2025-05-22 19:57:58.430 +01:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/ - application/x-www-form-urlencoded 263
+2025-05-22 19:57:58.437 +01:00 [INF] Executing endpoint '/Index'
+2025-05-22 19:57:58.440 +01:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-05-22 19:57:58.442 +01:00 [INF] Executing handler method BPCalculator.Pages.BloodPressureModel.OnPost - ModelState is "Valid"
+2025-05-22 19:57:58.444 +01:00 [INF] Executed handler method OnPost, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-05-22 19:57:58.449 +01:00 [INF] Executed page /Index in 7.5151ms
+2025-05-22 19:57:58.454 +01:00 [INF] Executed endpoint '/Index'
+2025-05-22 19:57:58.457 +01:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/ - 200 null text/html; charset=utf-8 26.9894ms
+2025-05-22 19:57:58.494 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico - null null
+2025-05-22 19:57:58.501 +01:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator\wwwroot\favicon.ico'
+2025-05-22 19:57:58.511 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/favicon.ico - 200 32038 image/x-icon 16.4232ms
