@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup>
+    <!-- Ignore all Razor-related files -->
+    <ExcludeByFile>**/*.cshtml;**/*.cshtml.cs</ExcludeByFile>
+  </PropertyGroup>
+</Project>

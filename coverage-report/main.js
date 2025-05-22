@@ -221,7 +221,7 @@ var assemblies = [
       { "name": "BPCalculator.Pages.Pages_Index", "rp": "BPCalculator_Pages_Index.html", "cl": 5, "ucl": 0, "cal": 5, "tl": 40, "cb": 15, "tb": 18, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BPCalculator.Pages.Pages_Privacy", "rp": "BPCalculator_Pages_Privacy.html", "cl": 0, "ucl": 1, "cal": 1, "tl": 8, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BPCalculator.Pages.PrivacyModel", "rp": "BPCalculator_PrivacyModel.html", "cl": 6, "ucl": 0, "cal": 6, "tl": 24, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
-      { "name": "BPCalculator.Program", "rp": "BPCalculator_Program.html", "cl": 6, "ucl": 18, "cal": 24, "tl": 54, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
+      { "name": "BPCalculator.Program", "rp": "BPCalculator_Program.html", "cl": 6, "ucl": 23, "cal": 29, "tl": 54, "cb": 0, "tb": 0, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
       { "name": "BPCalculator.Startup", "rp": "BPCalculator_Startup.html", "cl": 22, "ucl": 4, "cal": 26, "tl": 56, "cb": 1, "tb": 2, "cm": 0, "fcm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "mfch": [], "hc": [], "metrics": { } },
     ]},
 ];
