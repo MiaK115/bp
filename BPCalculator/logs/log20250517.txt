@@ -1,0 +1,28 @@
+2025-05-17 09:56:22.574 +01:00 [INF] Starting up the application
+2025-05-17 09:56:26.153 +01:00 [INF] User profile is available. Using 'C:\Users\miaku\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-17 09:56:26.764 +01:00 [INF] Inside Configure method
+2025-05-17 09:56:27.013 +01:00 [INF] Now listening on: http://localhost:5000
+2025-05-17 09:56:27.013 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-17 09:56:27.014 +01:00 [INF] Hosting environment: Development
+2025-05-17 09:56:27.014 +01:00 [INF] Content root path: C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator
+2025-05-17 09:56:57.431 +01:00 [INF] Starting up the application
+2025-05-17 09:56:58.041 +01:00 [INF] User profile is available. Using 'C:\Users\miaku\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-17 09:56:58.228 +01:00 [INF] Inside Configure method
+2025-05-17 09:56:58.279 +01:00 [INF] Now listening on: http://localhost:5000
+2025-05-17 09:56:58.279 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-17 09:56:58.280 +01:00 [INF] Hosting environment: Development
+2025-05-17 09:56:58.280 +01:00 [INF] Content root path: C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator
+2025-05-17 09:57:32.985 +01:00 [INF] Starting up the application
+2025-05-17 09:57:33.437 +01:00 [INF] User profile is available. Using 'C:\Users\miaku\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-17 09:57:33.540 +01:00 [INF] Inside Configure method
+2025-05-17 09:57:33.569 +01:00 [INF] Now listening on: http://localhost:5000
+2025-05-17 09:57:33.569 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-17 09:57:33.570 +01:00 [INF] Hosting environment: Development
+2025-05-17 09:57:33.570 +01:00 [INF] Content root path: C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator
+2025-05-17 10:10:05.535 +01:00 [INF] Starting up the application
+2025-05-17 10:10:07.379 +01:00 [INF] User profile is available. Using 'C:\Users\miaku\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-17 10:10:07.746 +01:00 [INF] Inside Configure method
+2025-05-17 10:10:07.885 +01:00 [INF] Now listening on: http://localhost:5000
+2025-05-17 10:10:07.886 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-17 10:10:07.887 +01:00 [INF] Hosting environment: Development
+2025-05-17 10:10:07.887 +01:00 [INF] Content root path: C:\Users\miaku\OneDrive\Documents\GitHub\bp\BPCalculator
