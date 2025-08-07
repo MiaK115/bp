@@ -31,7 +31,8 @@
 
 import { test, expect } from '@playwright/test';
 
-const baseURL = process.env.BASE_URL || 'http://localhost:5000';
+const baseUrl = process.env.BASE_URL || 'http://localhost:5000';
+await page.goto(baseUrl);
 
 test('User can calculate blood pressure category', async ({ page }) => {
     await page.goto(baseURL);
