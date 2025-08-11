@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
 namespace BPCalculator
 {
@@ -47,6 +48,9 @@ namespace BPCalculator
             {
                 endpoints.MapRazorPages();
             });
+
+            var logger = app.ApplicationServices.GetRequiredService<ILogger<Startup>>();
+            logger.LogInformation("Inside Configure method");
         }
     }
 }
