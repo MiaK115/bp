@@ -1,0 +1,51 @@
+name: Deploy to Render (Production)
+
+on:
+  push:
+    branches: [ production ]   # deploy when 'production' branch changes
+  workflow_dispatch:           # allow manual runs
+
+permissions:
+  contents: read
+
+env:
+  PRODUCTION_URL: https://bp-calculator.onrender.com
+
+jobs:
+  deploy:
+    name: Trigger Render Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      # Fire-and-forget: trigger a new deploy using Render's Deploy Hook URL
+      - name: Trigger Render deploy
+        env:
+          RENDER_DEPLOY_HOOK: ${{ secrets.RENDER_DEPLOY_HOOK_PROD }}
+        run: |
+          if [ -z "$RENDER_DEPLOY_HOOK" ]; then
+            echo "Missing secret: RENDER_DEPLOY_HOOK_PROD"
+            echo "Add it in GitHub: Settings > Secrets and variables > Actions"
+            exit 1
+          fi
+          echo "Triggering Render deploy..."
+          # Render deploy hooks are POST endpoints
+          curl -sSf -X POST "$RENDER_DEPLOY_HOOK"
+          echo "Deploy triggered."
+
+      # wait until the site is serving 200 OK (handles cold starts)
+      - name: Wait for site to become healthy (up to ~10 min)
+        run: |
+          echo "⏳ Waiting for $PRODUCTION_URL ..."
+          for i in {1..60}; do
+            STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$PRODUCTION_URL/")
+            if [ "$STATUS" -eq 200 ]; then
+              echo "Site is responding with 200 OK."
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "Timed out waiting for $PRODUCTION_URL"
+          exit 1
