@@ -6,10 +6,22 @@
     <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
     <ExcludeByFile>**/*.cshtml;**/*.cshtml.cs</ExcludeByFile>
+    <CollectCoverage>true</CollectCoverage>
+    <CoverletOutputFormat>cobertura</CoverletOutputFormat>
+
+    <!-- Exclude Razor views and their generated classes -->
+    <ExcludeByFile>**\*.cshtml;**\*.cshtml.cs</ExcludeByFile>
+
+    <!-- Filter out generated view classes like BPCalculator.Pages.Pages_Index, _ViewStart, etc. -->
+    <Exclude>[BPCalculator]BPCalculator.Pages.Pages_*</Exclude>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="coverlet.collector" Version="6.0.4">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.msbuild" Version="6.0.4">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
