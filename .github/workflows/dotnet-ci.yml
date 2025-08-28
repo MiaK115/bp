@@ -14,7 +14,6 @@ jobs:
   test-and-audit:
     name: Run Tests and Audit Packages
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -25,29 +24,28 @@ jobs:
           dotnet-version: 8.0.x
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore BPCalculator.sln
 
       - name: Build solution
-        run: dotnet build --configuration Release --no-restore
+        run: dotnet build BPCalculator.sln --configuration Release --no-restore
 
-      # Enforce 70% line coverage. Fails the job if any test project is <70%.
+      # Produce coverage and fail if line coverage < 70%
       - name: Run tests with coverage (fail if <70%)
-        run: dotnet test --no-build --configuration Release /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:Threshold=70 /p:ThresholdType=line
+        run: >
+          dotnet test BPCalculator.sln --no-build --configuration Release
+          /p:CollectCoverage=true
+          /p:CoverletOutput=./TestResults/Coverage/
+          /p:CoverletOutputFormat=cobertura
+          /p:Threshold=70
+          /p:ThresholdType=line
 
-      #  Generate a readable HTML + text summary
       - name: Generate coverage report
         run: |
           dotnet tool update -g dotnet-reportgenerator-globaltool
           reportgenerator -reports:**/TestResults/**/coverage.cobertura.xml -targetdir:coverage-report -reporttypes:Html;TextSummary
 
       - name: Show coverage in logs
-        if: always()
-        run: |
-          if [ -f coverage-report/Summary.txt ]; then
-            cat coverage-report/Summary.txt
-          else
-            echo "No coverage summary found."
-          fi
+        run: cat coverage-report/Summary.txt || true
 
       - name: Upload coverage HTML
         if: always()
