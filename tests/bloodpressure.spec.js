@@ -3,74 +3,83 @@ import { test, expect } from '@playwright/test';
 
 const BASE_URL = process.env.BASE_URL || 'http://localhost:5000';
 
-/**
- * Waits until the app is actually served 
- * Also verifies that at least one stable bit of your page content is present.
- */
 async function waitForAppReady(page) {
     await page.goto(BASE_URL, { waitUntil: 'domcontentloaded' });
 
-    // 1) Wait for the splash title to disappear
+    // Wait until Render splash is gone
     await page.waitForFunction(
         () => !/Render - Application loading/i.test(document.title || ''),
         { timeout: 60_000 }
     );
 
-    const contentHints = [
-        /systolic/i,
-        /diastolic/i,
-        /blood\s*pressure/i,
-    ];
+    // Let client-side render settle
+    await page.waitForLoadState('networkidle', { timeout: 30_000 });
 
-    await page.waitForFunction(
-        (patterns) => {
-            const bodyText = document.body?.innerText || '';
-            return patterns.some((p) => new RegExp(p, 'i').test(bodyText));
-        },
-        contentHints.map(String),
-        { timeout: 60_000 }
-    );
+    // ✅ Wait for a specific thing that we know exists on the real page:
+    // your labels or inputs (no regex array / no multi-match text).
+    const systolicLabel = page.getByLabel(/systolic/i);
+    const diastolicLabel = page.getByLabel(/diastolic/i);
+
+    // If labels aren’t wired up, fall back to inputs by name/id/placeholder
+    const systolicInput = systolicLabel.or(
+        page.locator('input#BP_Systolic, input[name="BP.Systolic"], input[name="BP_Systolic"]')
+    ).or(page.getByPlaceholder(/systolic/i));
+
+    const diastolicInput = diastolicLabel.or(
+        page.locator('input#BP_Diastolic, input[name="BP.Diastolic"], input[name="BP_Diastolic"]')
+    ).or(page.getByPlaceholder(/diastolic/i));
+
+    await expect(systolicInput).toBeVisible({ timeout: 60_000 });
+    await expect(diastolicInput).toBeVisible({ timeout: 60_000 });
+
+    return { systolicInput, diastolicInput };
 }
 
-
-function bpFieldLocators(page) {
-    const systolic =
-        page.getByLabel(/systolic/i).or(page.locator('input[name="BP.Systolic"]'));
-    const diastolic =
-        page.getByLabel(/diastolic/i).or(page.locator('input[name="BP.Diastolic"]'));
-    return { systolic, diastolic };
+async function attachDebug(page, tag) {
+    try {
+        await test.info().attach('page-title.txt', { body: await page.title(), contentType: 'text/plain' });
+        await test.info().attach('page-url.txt', { body: page.url(), contentType: 'text/plain' });
+        await test.info().attach('page.html', { body: await page.content(), contentType: 'text/html' });
+        const p = `test-results/${tag}-screenshot.png`;
+        await page.screenshot({ path: p, fullPage: true });
+        await test.info().attach(`${tag}-screenshot.png`, { path: p, contentType: 'image/png' });
+    } catch { /* best effort */ }
 }
 
 test.describe('Blood Pressure Calculator', () => {
-    test.setTimeout(90_000);
+    test.setTimeout(120_000);
 
     test('User can calculate blood pressure category', async ({ page }) => {
-        await waitForAppReady(page);
+        try {
+            const { systolicInput, diastolicInput } = await waitForAppReady(page);
 
-        const { systolic, diastolic } = bpFieldLocators(page);
+            await systolicInput.fill('135');
+            await diastolicInput.fill('85');
 
-        // Wait for input visibility (covers any late client-side render)
-        await expect(systolic, 'Systolic input should be visible').toBeVisible({ timeout: 30_000 });
-        await expect(diastolic, 'Diastolic input should be visible').toBeVisible({ timeout: 30_000 });
+            const submitBtn = page
+                .getByRole('button', { name: /submit|calculate|compute|check/i })
+                .or(page.locator('button[type="submit"], input[type="submit"]'));
 
-        // Enter values
-        await systolic.fill('135');
-        await diastolic.fill('85');
+            await expect(submitBtn).toBeVisible({ timeout: 20_000 });
+            await submitBtn.click();
 
-        // Click submit (support a few button label variants)
-        const submitBtn = page.getByRole('button', { name: /submit|calculate|compute/i });
-        await expect(submitBtn, 'Submit/Calculate button should be visible').toBeVisible({ timeout: 10_000 });
-        await submitBtn.click();
-
-        const result = page.getByText(/pre[-\s]?high|elevated|stage\s*1|normal|hypertension/i, { exact: false });
-        await expect(result, 'Result text should become visible').toBeVisible({ timeout: 15_000 });
+            await expect(
+                page.getByText(/pre[-\s]?high|elevated|stage\s*1|normal|hypertension/i)
+            ).toBeVisible({ timeout: 20_000 });
+        } catch (e) {
+            await attachDebug(page, 'calc-failure');
+            throw e;
+        }
     });
 
-    //a super fast smoke that just proves the form renders
     test('Form renders with both fields', async ({ page }) => {
-        await waitForAppReady(page);
-        const { systolic, diastolic } = bpFieldLocators(page);
-        await expect(systolic).toBeVisible({ timeout: 20_000 });
-        await expect(diastolic).toBeVisible({ timeout: 20_000 });
+        try {
+            const { systolicInput, diastolicInput } = await waitForAppReady(page);
+            await expect(systolicInput).toBeVisible({ timeout: 45_000 });
+            await expect(diastolicInput).toBeVisible({ timeout: 45_000 });
+        } catch (e) {
+            await attachDebug(page, 'render-failure');
+            throw e;
+        }
     });
 });
