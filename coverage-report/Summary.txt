@@ -1,5 +1,5 @@
 Summary
-  Generated on: 28/08/2025 - 20:39:50
+  Generated on: 28/08/2025 - 20:45:58
   Coverage date: 16/05/2025 - 19:30:10 - 22/05/2025 - 14:46:29
   Parser: MultiReport (9x Cobertura)
   Assemblies: 1

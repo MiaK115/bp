@@ -14,6 +14,7 @@ jobs:
   test-and-audit:
     name: Run Tests and Audit Packages
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -29,7 +30,6 @@ jobs:
       - name: Build solution
         run: dotnet build BPCalculator.sln --configuration Release --no-restore
 
-      # Produce coverage and fail if line coverage < 70%
       - name: Run tests with coverage (fail if <70%)
         run: >
           dotnet test BPCalculator.sln --no-build --configuration Release
@@ -38,6 +38,11 @@ jobs:
           /p:CoverletOutputFormat=cobertura
           /p:Threshold=70
           /p:ThresholdType=line
+
+      - name: List coverage files
+        run: |
+          set -eux
+          find . -name coverage.cobertura.xml -print || true
 
       - name: Generate coverage report
         run: |
