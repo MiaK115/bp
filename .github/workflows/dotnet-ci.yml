@@ -2,9 +2,9 @@ name: .NET Minimal CI
 
 on:
   push:
-    branches: [ "dev" ]
+    branches: [ dev, staging, production ]
   pull_request:
-    branches: [ "dev" ]
+    branches: [ dev, staging, production ]
   workflow_dispatch:
 
 permissions:
