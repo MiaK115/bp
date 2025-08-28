@@ -2,13 +2,13 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
-// page model
+// page model 
 
 namespace BPCalculator.Pages
 {
     public class BloodPressureModel : PageModel
     {
-        [BindProperty]                              // bound on POST
+        [BindProperty]
         public BloodPressure BP { get; set; }
 
         private readonly ILogger<BloodPressureModel> _logger;
