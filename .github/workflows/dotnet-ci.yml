@@ -44,11 +44,6 @@ jobs:
           set -eux
           find . -name coverage.cobertura.xml -print || true
 
-      - name: Generate coverage report
-        run: |
-          dotnet tool update -g dotnet-reportgenerator-globaltool
-          reportgenerator -reports:**/TestResults/**/coverage.cobertura.xml -targetdir:coverage-report -reporttypes:Html;TextSummary
-
       - name: Show coverage in logs
         run: cat coverage-report/Summary.txt || true
 
