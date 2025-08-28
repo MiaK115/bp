@@ -17,12 +17,13 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup .NET
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 8.x
+          dotnet-version: 8.0.x
+          cache: true
 
       - name: Restore dependencies
         run: dotnet restore
@@ -30,8 +31,32 @@ jobs:
       - name: Build solution
         run: dotnet build --configuration Release --no-restore
 
-      - name: Run Unit and BDD Tests
-        run: dotnet test --no-build --configuration Release
+      # Enforce 70% line coverage. Fails the job if any test project is <70%.
+      - name: Run tests with coverage (fail if <70%)
+        run: dotnet test --no-build --configuration Release /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:Threshold=70 /p:ThresholdType=line
+
+      #  Generate a readable HTML + text summary
+      - name: Generate coverage report
+        run: |
+          dotnet tool update -g dotnet-reportgenerator-globaltool
+          reportgenerator -reports:**/TestResults/**/coverage.cobertura.xml -targetdir:coverage-report -reporttypes:Html;TextSummary
+
+      - name: Show coverage in logs
+        if: always()
+        run: |
+          if [ -f coverage-report/Summary.txt ]; then
+            cat coverage-report/Summary.txt
+          else
+            echo "No coverage summary found."
+          fi
+
+      - name: Upload coverage HTML
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage-report
+          if-no-files-found: ignore
 
       - name: Audit .NET Packages for Vulnerabilities
         run: dotnet list package --vulnerable

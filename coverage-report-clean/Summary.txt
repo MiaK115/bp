@@ -1,0 +1,32 @@
+Summary
+  Generated on: 28/08/2025 - 17:37:48
+  Coverage date: 16/05/2025 - 19:30:10 - 22/05/2025 - 14:46:29
+  Parser: MultiReport (9x Cobertura)
+  Assemblies: 1
+  Classes: 10
+  Files: 10
+  Line coverage: 74.1%
+  Covered lines: 92
+  Uncovered lines: 32
+  Coverable lines: 124
+  Total lines: 365
+  Branch coverage: 86.5% (45 of 52)
+  Covered branches: 45
+  Total branches: 52
+  Method coverage: 84.6% (22 of 26)
+  Full method coverage: 76.9% (20 of 26)
+  Covered methods: 22
+  Fully covered methods: 20
+  Total methods: 26
+
+BPCalculator                              74.1%
+  BPCalculator.BloodPressure               100%
+  BPCalculator.Pages.BloodPressureModel    100%
+  BPCalculator.Pages.ErrorModel            100%
+  BPCalculator.Pages.Pages__ViewStart      100%
+  BPCalculator.Pages.Pages_Error             0%
+  BPCalculator.Pages.Pages_Index           100%
+  BPCalculator.Pages.Pages_Privacy           0%
+  BPCalculator.Pages.PrivacyModel          100%
+  BPCalculator.Program                    20.6%
+  BPCalculator.Startup                    84.6%
