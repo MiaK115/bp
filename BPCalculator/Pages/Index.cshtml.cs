@@ -11,6 +11,8 @@ namespace BPCalculator.Pages
         [BindProperty]
         public BloodPressure BP { get; set; }
 
+        public string Recommendation { get; set; }
+
         private readonly ILogger<BloodPressureModel> _logger;
 
         public BloodPressureModel(ILogger<BloodPressureModel> logger)
@@ -41,6 +43,12 @@ namespace BPCalculator.Pages
             if (!(BP.Systolic > BP.Diastolic))
             {
                 ModelState.AddModelError("", "Systolic must be greater than Diastolic");
+            }
+            // If the model state is valid, get the recommendation
+            if (ModelState.IsValid)
+            {
+                // Get the recommendation based on the BP values
+                Recommendation = BP.GetRecommendation();
             }
             return Page();
         }

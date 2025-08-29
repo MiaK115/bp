@@ -26,6 +26,8 @@ namespace BPCalculator
         [Range(DiastolicMin, DiastolicMax, ErrorMessage = "Invalid Diastolic Value")]
         public int Diastolic { get; set; }                      // mmHG
 
+        public int PulsePressure => Systolic - Diastolic;
+
         // calculate BP category
         public BPCategory Category
         {
@@ -57,6 +59,29 @@ namespace BPCalculator
                 return category;
 
             }
+        }
+
+        // Provide a recommendation based on the BP category
+        public string GetRecommendation()
+        {
+            string recommendation = string.Empty;
+
+            switch (Category)
+            {
+                case BPCategory.Low:
+                    recommendation = "Your blood pressure is low. Consider increasing your fluid intake, and consult a healthcare provider if you experience symptoms like dizziness.";
+                    break;
+                case BPCategory.Ideal:
+                    recommendation = "Your blood pressure is ideal! Keep up the good work with healthy habits.";
+                    break;
+                case BPCategory.PreHigh:
+                    recommendation = "Your blood pressure is on the higher side. Adopting a healthier diet and increasing your physical activity can help improve your blood pressure.";
+                    break;
+                case BPCategory.High:
+                    recommendation = "Your blood pressure is high. Please consult with a healthcare provider for further advice and potential treatment as soon as possible.";
+                    break;
+            }
+            return recommendation;
         }
     }
 
