@@ -2,9 +2,9 @@ name: .NET Minimal CI
 
 on:
   push:
-    branches: [ "dev" ]
+    branches: [ dev, staging, production ]
   pull_request:
-    branches: [ "dev" ]
+    branches: [ dev, staging, production ]
   workflow_dispatch:
 
 permissions:
@@ -17,21 +17,43 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup .NET
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: 8.x
+          dotnet-version: 8.0.x
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore BPCalculator.sln
 
       - name: Build solution
-        run: dotnet build --configuration Release --no-restore
+        run: dotnet build BPCalculator.sln --configuration Release --no-restore
 
-      - name: Run Unit and BDD Tests
-        run: dotnet test --no-build --configuration Release
+      - name: Run tests with coverage (fail if <70%)
+        run: >
+          dotnet test BPCalculator.sln --no-build --configuration Release
+          /p:CollectCoverage=true
+          /p:CoverletOutput=./TestResults/Coverage/
+          /p:CoverletOutputFormat=cobertura
+          /p:Threshold=70
+          /p:ThresholdType=line
+
+      - name: List coverage files
+        run: |
+          set -eux
+          find . -name coverage.cobertura.xml -print || true
+
+      - name: Show coverage in logs
+        run: cat coverage-report/Summary.txt || true
+
+      - name: Upload coverage HTML
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage-report
+          if-no-files-found: ignore
 
       - name: Audit .NET Packages for Vulnerabilities
         run: dotnet list package --vulnerable

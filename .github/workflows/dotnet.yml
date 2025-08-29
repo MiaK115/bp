@@ -2,9 +2,9 @@ name: .NET 8 CI
 
 on:
   push:
-    branches: [ "dev" ]
+    branches: [ dev, staging, production ]
   pull_request:
-    branches: [ "dev" ]
+    branches: [ dev, staging, production]
 
 jobs:
   build:
